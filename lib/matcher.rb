@@ -6,7 +6,7 @@ module Matcher
   end
 
   def compare(targets, compares)
-    targets.reduce(false) { |flag, target| flag ||= compares.all? { |compare| !match(target, compare) } }
+    targets.detect { |target| compares.all? { |compare| !match(target, compare) } }
   end
 
   def match(target, compare)
