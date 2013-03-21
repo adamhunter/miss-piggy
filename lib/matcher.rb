@@ -6,7 +6,7 @@ module Matcher
   end
 
   def compare(targets, compares)
-    targets.any? { |target| compares.all? { |compare| !match(target, compare) } }
+    targets.any? { |target| compares.none? { |compare| match(target, compare) } }
   end
 
   def match(target, compare)
