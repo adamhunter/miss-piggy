@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+$:.unshift(File.expand_path('../../lib', __FILE__))
+
+require 'matcher'
+require 'irb'
+
+def m(name1, name2)
+  Matcher.match(name1, name2)
+end
+
+IRB.start
