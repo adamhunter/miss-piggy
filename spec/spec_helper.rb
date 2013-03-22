@@ -1,4 +1,4 @@
-require 'matcher'
+require 'miss-piggy'
 
 RSpec.configure do |config|
   config.treat_symbols_as_metadata_keys_with_true_values = true
@@ -14,12 +14,12 @@ end
 
 RSpec::Matchers.define :match do |compare|
   match do |target|
-    Matcher.match target, compare
+    MissPiggy.match target, compare
   end
 end
 
 RSpec::Matchers.define :flag do |compares|
   match do |targets|
-    Matcher.flag targets, compares
+    MissPiggy.flag targets, compares
   end
 end

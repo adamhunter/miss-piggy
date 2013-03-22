@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-describe Matcher do
+describe MissPiggy do
   it "is a module" do
-    expect(Matcher).to be_a Module
+    expect(MissPiggy).to be_a Module
   end
 
   describe "flagging" do

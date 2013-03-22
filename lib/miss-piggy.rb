@@ -1,4 +1,4 @@
-module Matcher
+module MissPiggy
   extend self
 
   def flag(targets, compares)
