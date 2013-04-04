@@ -27,7 +27,9 @@ describe MissPiggy do
     describe "doesn't flag" do
 
       {
+        ['Adam Hunter', 'Miss Piggy']  => ['Miss P Piggy', 'Adam DJ Hunter'],
         ['Adam Hunter', 'Miss Piggy']  => ['Adam Hunter', 'Miss Piggy'],
+        ['Adam Hunter', 'Miss Piggy']  => ['Miss Piggy', 'Adam Hunter'],
         ['Miss Piggy',  'Adam Hunter'] => ['Adam Hunter', 'Miss Piggy'],
         ['Adam Hunter']                => ['Adam Hunter'],
         ['Miss Piggy']                 => ['Piggy Miss'],

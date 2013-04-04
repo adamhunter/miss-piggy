@@ -2,11 +2,11 @@ module MissPiggy
   extend self
 
   def flag(targets, compares)
-    compare(targets, compares) || compare(compares, targets)
+    !(matches(targets, compares) && matches(compares, targets))
   end
 
-  def compare(targets, compares)
-    targets.any? { |target| compares.none? { |compare| match(target, compare) } }
+  def matches(targets, compares)
+    targets.all? { |target| compares.any? { |compare| match(target, compare) } }
   end
 
   def match(target, compare)
